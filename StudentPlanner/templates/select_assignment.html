@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Delete
+{% endblock %}
+
+{% block main %}
+    <p>Please select which assignment you would like to edit</p>
+    <form action="/edit_assignment" method="get">
+        {% for assignment in assignments %}
+            <input type="radio" name="assignment_name" value="{{ assignment }}">{{ assignment }}<br>
+        {% endfor %}
+        <button class="btn btn-primary" type="submit">Edit Assignment</button>
+    </form>
+{% endblock %}

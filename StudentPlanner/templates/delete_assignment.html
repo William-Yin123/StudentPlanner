@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Delete
+{% endblock %}
+
+{% block main %}
+    <p>Please select which assignments you would like to delete</p>
+    <form action="/delete_assignment" method="post">
+        {% for assignment in assignments %}
+            <input type="checkbox" name="assignment_names" value="{{ assignment }}">{{ assignment }}<br>
+        {% endfor %}
+        <button class="btn btn-primary" type="submit">Delete Assignments</button>
+    </form>
+{% endblock %}

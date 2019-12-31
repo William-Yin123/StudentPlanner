@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    {% for i in range(len) %}
+        <div class="assignment">
+            <p>{{ assignments[i] }}</p>
+            {% if descriptions[i] != None %}
+                <p>{{ descriptions[i] }}</p>
+            {% endif %}
+            <p>{{ dates[i] }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

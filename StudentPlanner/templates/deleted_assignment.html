@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Delete
+{% endblock %}
+
+{% block main %}
+    <p>Successfully deleted the following assignments:</p>
+    {% for d in deleted %}
+        <p>{{ d }}</p>
+    {% endfor %}
+{% endblock %}
